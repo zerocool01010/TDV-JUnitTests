@@ -11,7 +11,7 @@ public class Padron {
     public Padron() {
 
     }
-    public Persona getPersona(String key) {
+    public Persona getPersona(String key) { //dni
         return participantes.get(key);
     }
     public void setVoto(String key) {
@@ -22,7 +22,7 @@ public class Padron {
         votado.put(key, true);
     }
 
-    public void AddVotante( Persona p) {
+    public void AddVotante(Persona p) {
         participantes.put(p.getDNI(),p);
         votado.put(p.getDNI(), false);
     }
@@ -33,6 +33,5 @@ public class Padron {
     public Map<String, Boolean> getVotado(){
         return votado;
     }
-
 
 }

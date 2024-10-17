@@ -1,7 +1,7 @@
 import org.example.Persona;
 import org.junit.*;
-
 import java.util.Random;
+import static org.junit.Assert.assertEquals;
 
 public class PersonaTest {
 
@@ -38,10 +38,10 @@ public class PersonaTest {
     }
 
     @Test
-    public void tesHabilitadoParaVotar() {
+    public void testHabilitadoParaVotar() {
         boolean obtenido = casoActual.isHabilitadoParaVotar();
         boolean esperado = casoActual.getEdad()>16;
-        Assert.assertEquals(obtenido, esperado);
+        assertEquals(obtenido, esperado);
     }
 
 }
