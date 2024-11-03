@@ -21,11 +21,11 @@ public class PadronTest {
         Persona p4 = new Persona("Florencia","40.000.102","1996-02-02",27,true);
         Persona p5 = new Persona("Gonzalo","45.462.218","2000-07-10",24,true);
 
-        padron.AddVotante(p1);
-        padron.AddVotante(p2);
-        padron.AddVotante(p3);
-        padron.AddVotante(p4);
-        padron.AddVotante(p5);
+        padron.addVotante(p1);
+        padron.addVotante(p2);
+        padron.addVotante(p3);
+        padron.addVotante(p4);
+        padron.addVotante(p5);
     }
 
     @AfterClass
@@ -37,7 +37,7 @@ public class PadronTest {
     public void testCantVotantesActualizada(){
         Persona nuevoVotante = new Persona("Pedrito","27.544.666","1983-02-10",40,true);
         int cantVieja = padron.getPartipantes().size();
-        padron.AddVotante(nuevoVotante);
+        padron.addVotante(nuevoVotante);
         int cantNueva = padron.getPartipantes().size();
         assertEquals(cantNueva, cantVieja + 1);
     }
@@ -45,8 +45,10 @@ public class PadronTest {
     @Test
     public void testVotanteAgregado(){
         Persona nuevoVotante = new Persona("Pedrito","27.544.666","1983-02-10",40,true);
-        padron.AddVotante(nuevoVotante);
+        padron.addVotante(nuevoVotante);
         Persona p = padron.getPersona(nuevoVotante.getDNI());
         assertNotNull(p);
     }
+
+
 }

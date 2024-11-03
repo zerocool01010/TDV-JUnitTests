@@ -34,7 +34,6 @@ public class PersonaTest {
         int numeroAleatorio = generadorAleatorios.nextInt(PersonaTest.ejemplos.length);
         casoActual=ejemplos[numeroAleatorio];
         //  buCasoActual= clone(casoActual)
-
     }
 
     @Test

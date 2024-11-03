@@ -16,13 +16,12 @@ public class Padron {
     }
     public void setVoto(String key) {
         Persona p = getPersona(key);
-        if (p==null);
-        boolean voto=votado.get(key);
-        if (voto==true);
-        votado.put(key, true);
+        if (p != null && !votado.get(key)) votado.put(key, true);
+//        boolean voto=votado.get(key);
+//        if (voto==true);
     }
 
-    public void AddVotante(Persona p) {
+    public void addVotante(Persona p) {
         participantes.put(p.getDNI(),p);
         votado.put(p.getDNI(), false);
     }
